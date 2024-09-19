@@ -1,0 +1,38 @@
+.wrapper{
+    margin: 5rem auto ;
+    padding: 2rem 3rem;
+    border: 1px solid red;
+    border-radius: 2rem;
+}
+
+h1{
+    margin-bottom: 2rem;
+    color: red;
+}
+.action-buttons{
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+    align-items: baseline;
+}
+
+button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+a:hover{
+
+    text-decoration: underline;
+    color: blue;
+}
+
+button:hover{
+filter: opacity(0.8);
+}

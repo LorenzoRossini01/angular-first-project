@@ -1,0 +1,27 @@
+ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+li{
+    flex-basis: 25%;
+    text-align: center;
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+mat-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+}
+
+button{
+    margin-top: 1rem;
+}

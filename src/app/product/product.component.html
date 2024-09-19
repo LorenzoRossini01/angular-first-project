@@ -1,0 +1,6 @@
+
+    <h2>{{product.name}}</h2>
+
+    <p>{{product.price |currency:'$'}}</p>
+    <button mat-button [routerLink]="['/products/edit', productId]" [queryParams]="product">Edit</button>
+    <button mat-button routerLink="../">Go back</button>

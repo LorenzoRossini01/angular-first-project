@@ -1,0 +1,13 @@
+
+<div class="wrapper">
+    <div>
+        <h1>{{error.title}} - code {{error.statusCode}}</h1>
+    </div>  
+     <div *ngIf="error.description">
+        <p>{{error.description}}</p>
+     </div>
+     <div class="action-buttons">
+        <a routerLink="{{error.redirect}}">{{error.redirectMessage}}</a>
+        <button  routerLink="..">{{error.backButton}}</button>
+     </div>
+</div>

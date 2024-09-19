@@ -1,0 +1,47 @@
+<h1>HOMEPAGE</h1>
+<mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>{{title | uppercase}}</mat-card-title>
+      <mat-card-subtitle>{{subtitle | lowercase}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p><span>Data base: </span>{{todayDate|date}}</p>
+      <p><span>Data fullDate: </span>{{todayDate|date:'fullDate'}}</p>
+      <p><span>Data specifico: </span>{{todayDate|date:'dd/MM/yyyy'}}</p>
+  
+      <p><span>Salary: </span>{{salary |number:'1.2-2'}}</p>
+      <p><span>Salary: </span>{{salary | currency:'£$€'}}</p>
+      <p><span>Salary: </span>{{salary/100 | percent}}</p>
+      <p><span>From objects: </span>{{_object.name }}</p>
+      <p><span>custom pipe (reverse): </span>{{title | reverse }}</p>
+
+      <br>
+      <div [ngClass]="isActive?'active':'inactive'">
+        <h2>attribute directive</h2>
+      </div>
+      <div *ngIf="isActive">
+        <h2>Structural directive</h2>
+        <div *ngFor="let item of items; index as i">
+          <p>{{i+1}}. {{item}}</p>
+        </div>
+      </div>
+      <div [ngSwitch]="view">
+        <div *ngSwitchCase="'home'">
+          <h2>this is home view</h2>
+        </div>
+        <div *ngSwitchCase="'about'">
+          <h2>this is about view</h2>
+        </div>
+        <div *ngSwitchDefault>
+          <h2>this is default view</h2>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <!-- <input type="text" (keyup)="updateTitle($event)"> -->
+      <input type="text" [(ngModel)]="title">
+      <button mat-button (click)="handleClick()">Enable other buttons</button>
+      <button mat-button [disabled]="isDisabled">Learn More</button>
+    </mat-card-actions>
+</mat-card>
+    
